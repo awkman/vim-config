@@ -1,0 +1,3 @@
+[submodule "bundle/SrcExpl"]
+	path = bundle/SrcExpl
+	url = https://github.com/wesleyche/SrcExpl.git
