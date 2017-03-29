@@ -7,3 +7,6 @@
 [submodule "bundle/Trinity"]
 	path = bundle/Trinity
 	url = https://github.com/wesleyche/Trinity.git
+[submodule "bundle/AutoComplPop"]
+	path = bundle/AutoComplPop
+	url = https://github.com/vim-scripts/AutoComplPop.git
