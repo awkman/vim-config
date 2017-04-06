@@ -46,6 +46,7 @@ set autoindent			" auto indentation
 set copyindent			" copy the previous indentation on autoindenting
 set smartcase			" ignore case if search pattern is all lowercase,case-sensitive otherwise
 set smarttab			" insert tabs on the start of a line according to context
+set noexpandtab
 
 
 " disable sound on errors
@@ -75,15 +76,12 @@ endif
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 
-" Settings of status line {
-"
+" Settings of status line
 set laststatus=2
 set statusline=%4*%<\%m%<[%f\%r%h%w]\ \ \ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
-" }
 
 
-" Settings for Tab "
-set noexpandtab
+" Settings for Tab
 nnoremap <S-z> :tabp<CR>
 nnoremap <S-x> :tabn<CR>
 
@@ -111,3 +109,15 @@ inoremap jj <ESC>
 
 " Settings for taglist
 let Tlist_Ctags_Cmd = "c:/ctags58/ctags.exe"
+
+" Settings for syntstics
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
