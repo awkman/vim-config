@@ -123,3 +123,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 let g:syntastic_vue_checkers = ['eslint']
 let g:syntastic_vue_eslint_exe = '$(npm bin)/eslint'
+
+" indent settings for different filetypes
+autocmd Filetype html,js,vue,css setlocal ts=2 sts=2 sw=2 expandtab
