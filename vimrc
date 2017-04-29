@@ -111,9 +111,11 @@ inoremap jj <ESC>
 let Tlist_Ctags_Cmd = "c:/ctags58/ctags.exe"
 
 " Settings for syntstics
+if !has('win32') " Workaround for errors in Windows
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+endif
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
